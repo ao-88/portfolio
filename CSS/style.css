@@ -11,3 +11,19 @@ body {
     background-position: center;
     background-size: cover;
 }
+
+.wrap {
+    color: white;
+    font-family: arial;
+}
+
+
+footer {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #000;
+    text-align: center;
+    padding: 10px 0;
+}
