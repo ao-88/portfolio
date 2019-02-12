@@ -14,8 +14,62 @@ body {
     color: white;
     font-family: arial;
     overflow: hidden;
+    user-select: none;
 }
 
+.burger {
+    position: fixed;
+    top: 1%;
+    right: 2%;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.menu {
+    position: fixed;
+    top: -60px;
+    left: 10vw;
+    right: 10vw;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50px;
+    transition: .5s;
+}
+
+.menu.active {
+    top: 0;
+}
+
+nav {}
+
+ul {
+    list-style: none;
+    display: flex;
+
+}
+
+li {
+    flex-basis: 25%;
+    text-align: center;
+    font-size: 25px;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+li:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+    overflow: hidden;
+    border-radius: 50px;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    text-align: justify;
+}
 
 footer {
 
