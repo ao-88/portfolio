@@ -1,3 +1,8 @@
+/* font-family: 'Josefin Sans', sans-serif;
+font-family: 'Archivo Narrow', sans-serif; */
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -12,9 +17,15 @@ body {
 
 .wrap {
     color: white;
-    font-family: arial;
+    font-family: 'Archivo Narrow', sans-serif;
     overflow: hidden;
     user-select: none;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
 }
 
 .burger {
@@ -35,7 +46,7 @@ body {
     top: -60px;
     left: 10vw;
     right: 10vw;
-
+    font-family: 'Josefin Sans', sans-serif;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 50px;
     transition: .5s;
@@ -46,7 +57,7 @@ body {
     top: 0;
 }
 
-nav {}
+
 
 ul {
     list-style: none;
@@ -65,18 +76,16 @@ li {
 
 li:hover {
     background-color: rgba(0, 0, 0, 0.6);
-    overflow: hidden;
     border-radius: 50px;
 }
 
+/* GŁÓWNA */
 .center {
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 300px;
-    text-align: justify;
-
 
 }
 
@@ -85,59 +94,97 @@ li:hover {
     transition: 2s;
 }
 
+.textp {
+    font-size: 22px;
+    text-align: justify;
+
+}
+
 /* PORTFOLIO */
 
 .portfolio {
-    /* display: flex; */
-    position: fixed;
-    top: -100vh;
+    position: absolute;
+    top: -400vh;
     left: 0;
-    height: 100vh;
+    min-height: 100vh;
     width: 100vw;
     background-color: rgba(12, 100, 19, 0.473);
-    /* z-index: 3; */
     padding: 50px;
     transition: 1s;
 }
 
 .portfolio.active {
     top: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: space-around;
+    align-content: space-around;
+    width: 60vw;
+}
+
+.container div {
+    margin: 20px 20px;
+    background-color: #000000;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.pic1 {
+    display: flex;
+    font-size: 20px;
+}
+
+.pic1 img {
+    flex-basis: 40%;
+    height: 40vh;
+}
+
+.pic1 div {
+    border-style: none;
+    text-align: center;
+    flex-grow: 1;
+    font-size: 20px;
+    line-height: 30vh;
 
 }
 
+.pic1 div a {
+    text-decoration: none;
+    color: white;
+}
 
 /* ABOUT */
 
 .about {
-    /* display: flex; */
     position: fixed;
     top: 0;
     left: -100vw;
     height: 100vh;
     width: 100vw;
     background-color: rgba(218, 104, 12, 0.63);
-    /* z-index: 3; */
     padding: 50px;
     transition: 1s;
 }
 
 .about.active {
     left: 0;
-
 }
 
 
 /* CONTACT */
 
 .contact {
-    /* display: flex; */
     position: fixed;
     top: 0;
     left: 100vw;
     height: 100vh;
     width: 100vw;
     background-color: rgba(45, 255, 190, 0.5);
-    /* z-index: 3; */
     padding: 50px;
     transition: 1s;
 }
@@ -147,14 +194,121 @@ li:hover {
 
 }
 
+.all {
+    position: absolute;
+    top: 20vh;
+    left: 50vw;
+    transform: translateX(-50%);
+    font-size: 30px;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 60px;
+}
+
+
+
+.all>div:hover i {
+    color: #ddd;
+}
+
+.all i {
+    font-size: 40px;
+    margin-right: 20px;
+}
+
+.all a {
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+
+}
+
 /* STOPKA */
 footer {
 
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
     bottom: 0;
     background-color: #000;
     text-align: center;
     padding: 10px 0;
+}
+
+@media (max-width: 769px) and (orientation: portrait) {
+    .portfolio {
+        position: absolute;
+        top: -400vh;
+        left: 0;
+        min-height: 100vh;
+        width: 100vw;
+        background-color: rgba(12, 100, 19, 0.473);
+        padding: 50px;
+        transition: 1s;
+    }
+
+    .portfolio.active {
+        top: 0;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        /* justify-content: space-around; */
+        /* align-content: space-around; */
+        width: 80vw;
+    }
+
+    .container div {
+        /* margin: 20px 20px; */
+        background-color: #000000;
+        background-size: cover;
+        background-position: center;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pic1 {
+        display: flex;
+        font-size: 20px;
+
+    }
+
+    .pic1 img {
+        flex-basis: 20%;
+        height: 30vh;
+    }
+
+    .pic1 div {
+        flex-basis: 10vh;
+        display: flex;
+        flex-direction: column;
+        border-style: none;
+        /* text-align: center; */
+        /* flex-grow: 1; */
+        font-size: 20px;
+        /* line-height: 20vh; */
+        margin: 0;
+        color: red;
+
+    }
+
+    .pic1 div:nth-of-type(1) {
+        background-color: #aaa;
+    }
+
+    .pic1 div:nth-of-type(2) {
+        background-color: #ddd;
+    }
+
+    .pic1 div a {
+        display: block;
+        text-decoration: none;
+        color: black;
+    }
+
+}
+
 }
